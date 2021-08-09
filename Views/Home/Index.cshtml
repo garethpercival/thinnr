@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Please enter a URL</h1>
+    <input class="form-control mb-2 w-100" id="urlToShorten" type="text" />
+    <button class="btn btn-lg btn-primary" onClick="submit();">Shorten</button>
+</div>
+
+<script>
+    function submit() {
+        var input = document.getElementById('urlToShorten');
+        url = input.value;
+        window.location.href = window.location.href + 'Encode?url=' + url;
+    }
+</script>
