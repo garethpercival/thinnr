@@ -43,7 +43,8 @@ namespace thinnr.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex.ToString());
-                throw;
+                var errorModel = new ShortUrlModel(ex.Message);
+                return View(errorModel);
             }
         }
 
